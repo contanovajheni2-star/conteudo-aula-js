@@ -14,3 +14,13 @@ texto1 = texto1 + 'gera a união!';
 //texto1 += 'gera a união!';
 
 console.log(texto1);
+
+//Exemplo de Incremento
+let W = 5;
+console.log(z);
+
+//Exemplo de Decremento
+let b = 5;
+b--;
+let c = b;
+console.log(c);
