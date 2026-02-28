@@ -30,13 +30,39 @@ if (pegarHoras > 18) {
     elemento.innerHTML = "Boa Noite!";
 }
 
-//exemplo if 2
-let idade = 18;
-let texto = 'Voce é novo demais para dirigir!';
+// Exemplo if 2
+//let idade = 18;
+//let texto = 'Você é novo demais para dirigir!';
 
-if (idade >= 18) {
-    texto = 'Voce tem idade para dirigir!';
+
+//if (idade >= 18) {
+  //texto =  'Você tem idade para dirigir!';
+//}
+
+//document.getElementById('idade').innerHTML = 'Sua idade é: ' + idade;
+//document.getElementById('ex2').innerHTML = texto;
+
+//Exemplo If Aninhado
+//let idade2 = 16;
+//let pais = 'Estados Unidos';
+//let mensagem = 'Voce não pode dirigir';
+
+
+//if (pais == 'Brasil') {
+   // if (idade2 >= 16 ) {
+       // mensagem = 'Voce pode dirigir!';
+  //  }
+//}
+
+//document.getElementById('ex3').innerHTML = mensagem;
+
+//Exemplo de If Aninhado com operador AND (&&)
+let idade3 = 16;
+let pais2 = 'Estados Unidos';
+let mensagem2 = 'Voce não pode dirigir';
+
+if ((pais2 == 'Estados Unidos') && (idade3 == 15)) {
+    mensagem2 = 'Voce pode dirigir!';
 }
 
-document.getElementById('idade').'Sua idade é: ' + idade;
-document.getElementById('ex2').innerHTML = texto;
+document.getElementById('ex3').innerHTML = mensagem2;
