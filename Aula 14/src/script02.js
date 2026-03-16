@@ -1,42 +1,87 @@
-// Definindo uma array global
-const times = ["São Paulo", "Corinthians", "Flamengo", "Fluminense"];
+// Array global
+const frutas = ["Banana", "Maçã", "Morango", "Uva", "Laranja", "Pêra"];
 
-// Utilizando o método indexOf()
-let posicaoItem = times.indexOf("Flamengo");
+// Utilizando o método sort()
+console.log(frutas);
 
-console.log(times);
-console.log(posicaoItem);
+// frutas.sort();
 
-// Utilizando o método lastIndexOf()
-const times2 = ["São Paulo", "Corinthians", "São Paulo", "São Paulo"];
+console.log(frutas);
 
-let posicaoItem2 = times2.lastIndexOf("São Paulo");
+// Utilizando o método reverse()
+frutas.reverse();
 
-console.log(posicaoItem2);
+console.log(frutas);
 
-// Utilizando o método includes()
-let verificaExistenciaItem = times.includes("Palmeiras");
+// Combinando sort() e reverse()
+const frutas2 = ["Banana", "Maçã", "Morango", "Uva", "Laranja", "Pêra"];
+console.log(frutas2);
 
-console.log(verificaExistenciaItem);
+frutas2.sort();
+frutas2.reverse();
 
-// Utilizando o método find()
-const number = [4,6,83,64,2,17];
-let encontrarMaior = number.find(verificaValor);
+console.log(frutas2);
 
-function verificaValor(valor) {
-  return valor > 50;
+// Utilizando o método toSorted()
+const meses = ["Jan", "Fev", "Mar", "Abr", "Mai"];
+
+const mesesSorted = meses.toSorted();
+
+console.log(meses);
+console.log(mesesSorted);
+
+// Utilizando o método toReversed()
+const mesesReversed = meses.toReversed();
+
+console.log(mesesReversed);
+
+// Utilizando o sort() em números
+const numeros = [4, 28, 75, 50, 3, 9, 18];
+
+console.log(numeros);
+
+numeros.sort(function (a, b) {return a - b});
+
+console.log(numeros);
+
+const numeros2 = [4, 28, 75, 50, 3, 9, 18];
+
+console.log(numeros2);
+
+numeros2.sort(function (a, b) {return b - a});
+
+console.log(numeros2);
+
+// Utilizando o método sort() em números para de maneira aleatória
+const numeros3 = [4, 28, 75, 50, 3, 9, 18];
+
+numeros3.sort(function () {return 0.5 - Math.random()});
+
+// Utilizando o método Math.min em array
+const numeros4 = [4, 28, 75, 50, 3, 9, 18];
+
+function menorNumeroArray(array) {
+  return Math.min.apply(null, array);
 }
 
-console.log(encontrarMaior);
+console.log(menorNumeroArray(numeros4));
 
-// Utilizando o método findIndex()
-let encontrarIndice = number.findIndex(verificaValor);
-console.log(encontrarIndice);
+// Utilizando o método Math.max em array
+function maiorNumeroArray(array) {
+  return Math.max.apply(null, array);
+}
 
-// Utilizando o método findLast()
-let encontrarMaiorFinal = number.findLast((x) => 50);
-console.log(encontrarMaiorFinal);
+console.log(maiorNumeroArray(numeros4));
 
-// Utilizando o método findLastIndex()
-let encontrarIndiceMaiorFinal = number.findLastIndex((indice) => valor > 50);
-console.log(encontrarIndiceMaiorFinal);
+// Utilizando o sort() com objetos
+const pessoas = [
+  {nome: "Richard", idade: 19},
+  {nome: "Jhenifer", idade: 20},
+  {nome: "Erique", idade: 21},
+];
+
+console.log(pessoas);
+
+pessoas.sort((a, b) => {return a.idade - b.idade});
+
+console.log(pessoas);
