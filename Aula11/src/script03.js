@@ -1,21 +1,19 @@
-// Utilização o this em função
+// Utilizando o this em função
 
 function teste() {
-    return console.log(this);
+  return console.log(this);
 }
 
-teste();
+// teste();
 
 const carro = {
-    marca:"Pagani",
-    modelo:"Huayra",
-    cor:"Amarelo",
+  marca: "Pagani",
+  modelo: "Huayra",
+  cor: "Amarelo",
 }
 
-let carroArry = Object.values();
-(carro);
+let carroArray = Object.values(carro);  
 
-let cArrayString = carroArray;
-toString();
+let cArrayString = carroArray.toString();
 
-console.log(carroArray);
+console.log(cArrayString);
