@@ -107,3 +107,4 @@ let texto5 = "";
 for (let item of frutasKeys) {
     texto5 += item + "<br>"
 }
+document.querySelector(".ex8").innerHTML = texto4;
