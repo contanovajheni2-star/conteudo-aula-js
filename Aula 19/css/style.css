@@ -1,0 +1,13 @@
+body {
+    font-family: 'Franklin Gothic Medium';
+    background-color: rgb(165, 109, 218);
+    color: aliceblue;
+}
+
+.ativo {
+    color: rgb(62, 6, 112);
+}
+
+.info {
+    color: red;
+}
