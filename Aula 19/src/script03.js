@@ -1,25 +1,42 @@
-// Utilizando o key events
+// Atribuindo vários eventos a um só elemento
+const btnAdicionar = document.querySelector(".btn");
 const conteudo = document.querySelector(".conteudo");
-const campo = document.querySelector("#campo");
 
-campo.addEventListener("Keydown", handleTecla);
+btnAdicionar.addEventListener("mouseover", () => {
+    conteudo.innerHTML += "Você passou o mouse por cima do botão. <br>";
+    conteudo.style.color = "darkpurple";
+});
 
-function handleTecla(evento) {
-    conteudo.innerHTML = "Voce digitou: " + evento.key;
-}
+    btnAdicionar.addEventListener("click", () => {
+          conteudo.innerHTML += "click <br>";
+          conteudo.style.color ="orange";
+    })
+   btnAdicionar.addEventListener("mouseout", () => {
+    conteudo.innerHTML += "Mouse Out <br>";
+    conteudo.style.color = "blue";
+   });
 
-function handleTexto(evento) {
-    conteudo2.innerHTML = "Voce digitou: " + evento.target.value;
-}
+// Utilizando o objeto window
+const conteudo2 = document.querySelector(".conteudo-window");
 
-//Exemplo de detecção de tecla
-const campo2 = document.querySelector("#campoEnter");
-const conteudo2 = document;
-const conteudo3 = document.querySelector(".conteudo3");
 
-campo2.addEventListener("Keydown", handleCondicao);
-function handleCondicao(evento) {
-    if(evento.code === "Enter") {
-        conteudo3.innerHTML = "A tecla enter foi pressionada!";
-    }
-};
+   window.addEventListener("resize", () => {
+    conteudo2.innerHTML = Math.random();
+   });
+
+   // Utilizando parametros
+   const conteudo3 = document.querySelector(".resultado-produto");
+   const btn2 = document.querySelector(".btn2");
+
+   let p1 = 4;
+   let p2 = 2;
+
+   btn2.addEventListener("click", () => {
+    conteudo3.innerHTML = produto(p1, p2);
+   });
+
+   function produto (p1, p2) {
+    return p1 * p2;
+   }
+
+   // Propagação de eventos (bubbling e capture)
